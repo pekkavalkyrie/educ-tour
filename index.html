@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Educational Tour Portfolio | BSIT Student</title>
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #22c55e;
+  --secondary: #0f172a;
+  --accent: #38bdf8;
+  --text-dark: #0f172a;
+  --text-light: #f8fafc;
+  --glass: rgba(255,255,255,0.12);
+  --border: rgba(255,255,255,0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.75)), url('image/ROBOT.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text-light);
+}
+
+/* NAVBAR */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15,23,42,0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+nav strong {
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: var(--text-light);
+  margin-left: 1rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+nav a:hover { color: var(--accent); }
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 800px;
+  margin: auto;
+  opacity: 0.95;
+}
+
+/* SECTIONS */
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 1.5rem;
+}
+
+section h2 {
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+/* CARDS */
+.card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(12px);
+}
+
+.card ul { margin-left: 1.2rem; }
+.card li { margin-bottom: 0.4rem; }
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* TIMELINE */
+.timeline { display: grid; gap: 1.5rem; }
+
+/* GALLERY */
+.gallery figure { margin-bottom: 3rem; }
+
+.gallery figcaption {
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.gallery img {
+  width: 220px;          /* same width */
+  height: 160px;         /* same height */
+  object-fit: cover;     /* crops image without distortion */
+  border-radius: 12px;
+  margin: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--border);
+}
+
+.journal-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+}
+
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--border);
+  background: rgba(15,23,42,0.85);
+}
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+</style>
+</head>
+
+<body>
+<header>
+  <nav>
+    <strong>BSIT EDUCATIONAL TOUR PORTFOLIO</strong>
+    <div>
+      <a href="#overview">Overview</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#journals">Journals</a>
+      <a href="#gallery">Gallery</a>
+      
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Educational Tour Portfolio</h1>
+  <p><strong>Cebu–Bohol Educational Tour & Industry Exposure</strong><br>
+  A professional learning journey focused on industry immersion, real-world IT applications, and career development.</p>
+</section>
+
+<section id="overview">
+  <h2>Tour Overview</h2>
+  <div class="card">
+    <p>
+      The Cebu–Bohol Educational Tour was designed to provide BSIT students with
+      hands-on exposure to real-world information technology environments and
+      professional industry practices. Conducted from
+      <strong>November 12–15, 2025</strong>, the tour included visits to leading IT
+      companies, research institutions, and public safety organizations, allowing
+      students to connect classroom learning with practical applications.
+    </p>
+    <ul>
+      <li><strong>Objectives:</strong> Industry immersion, practical IT exposure, career readiness</li>
+      <li><strong>Focus Areas:</strong> UP IN IT UP CEBU INFORMATION CENTER, RIVAN IT, DYNATA PHILIPPINES INC, MATA TECHNOLOGY, T.A.R.S.I.E.R. 117</li>
+      <li><strong>Learning Outcomes:</strong> Enhanced technical skills, professional awareness, innovation-oriented mindset</li>
+    </ul>
+  </div>
+</section>
+
+
+<section id="timeline">
+  <h2>Daily Timeline</h2>
+  <div class="timeline">
+    <div class="card">
+      <h3>Day 1 – November 12, 2025</h3>
+      <p><strong>UP Cebu – Business Incubator for Information Technology</strong></p>
+      <p>Introduction to startup incubation, innovation, and mentorship programs.</p>
+    </div>
+    <div class="card">
+      <h3>Day 2 – November 13, 2025</h3>
+      <p><strong>RIVAN IT Cebu</strong> & <strong>Dynata Philippines Inc.</strong></p>
+      <p>Cybersecurity, networking, and data analytics exposure.</p>
+    </div>
+    <div class="card">
+      <h3>Day 3 – November 14, 2025</h3>
+      <p><strong>Mata Technologies Inc.</strong></p>
+      <p>Virtual reality, 360° mapping, and digital visualization.</p>
+    </div>
+    <div class="card">
+      <h3>Day 4 – November 15, 2025</h3>
+      <p><strong>T.A.R.S.I.E.R. 117 – Bohol</strong></p>
+      <p>Emergency response systems and public safety coordination.</p>
+    </div>
+  </div>
+</section>
+
+<section id="journals">
+  <h2>Company Journals</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="image/JOURNAL1.jpg" alt="UP Cebu" class="journal-img">
+      <h3>UP Cebu – Business Incubator for IT</h3>
+      <p><strong>Date:</strong> Nov 12, 2025<br><strong>Facilitator:</strong> Jason Nieve</p>
+      
+    </div>
+
+    <div class="card">
+      <img src="image/JOURNAL3.jpg" alt="RIVAN IT Cebu" class="journal-img">
+      <h3>RIVAN IT Cebu</h3>
+      <p><strong>Date:</strong> Nov 13, 2025<br><strong>Facilitator:</strong> Anton Diego H. Lim and Miss Valerie Liston</p>
+    
+    </div>
+
+    <div class="card">
+      <img src="image/JOURNAL2.jpg" alt="Dynata Philippines" class="journal-img">
+      <h3>Dynata Philippines Inc.</h3>
+      <p><strong>Date:</strong> Nov 13, 2025<br><strong>Facilitator:</strong> Kevin Lou</p>
+      
+    </div>
+
+    <div class="card">
+      <img src="image/JOURNAL4.jpg" alt="Mata Technologies" class="journal-img">
+      <h3>Mata Technologies Inc.</h3>
+      <p><strong>Date:</strong> Nov 14, 2025<br><strong>Facilitator:</strong> Kertinel Andre C. Tantuan</p>
+    
+    </div>
+
+    <div class="card">
+      <img src="image/JOURNAL5.jpg" alt="TARSIER 117" class="journal-img">
+      <h3>T.A.R.S.I.E.R. 117</h3>
+      <p><strong>Date:</strong> Nov 15, 2025</p>
+
+    </div>
+</section>
+
+<section id="gallery">
+  <h2>Photo Gallery</h2>
+  <div class="gallery">
+    <figure>
+     <figcaption>UP IN IT UP CEBU INFORMATION TECHNOLOGY CENTER</figcaption>
+    <img src="image/UP1.jpg" alt="UP Cebu Visit">
+    <img src="image/UP2.jpg" alt="UP Cebu Visit">
+    <img src="image/UP3.jpg" alt="UP Cebu Visit">
+    <img src="image/UP4.jpg" alt="UP Cebu Visit">
+    <img src="image/UP5.jpg" alt="UP Cebu Visit">
+    <img src="image/UP6.jpg" alt="UP Cebu Visit">
+    <img src="image/UP7.jpg" alt="UP Cebu Visit">
+    <img src="image/UP8.jpg" alt="UP Cebu Visit">
+    </figure>
+    <figure>
+      <figcaption>RIVAN IT CEBU</figcaption>
+      <img src="image/RIVAN.jpg" alt="RIVAN IT">
+      <img src="image/RIVAN1.jpg" alt="RIVAN IT">
+      <img src="image/RIVAN2.jpg "alt="RIVAN IT">
+    </figure>
+    <figure>
+      <figcaption>DYNATA PHILIPPINES INC.</figcaption>
+      <img src="image/DYNATA5.jpg" alt="Dynata">
+      <img src="image/DYNATA4.jpg" alt="Dynata">
+      <img src="image/DYNATA3.jpg" alt="Dynata">
+      <img src="image/DYNATA2.jpg" alt="Dynata">
+      <img src="image/DYNATA1.jpg" alt="Dynata">
+      <img src="image/DYNATA6.jpg" alt="Dynata">
+    </figure>
+    <figure>
+      <figcaption>MATA TECHNOLOGIES</figcaption>
+      <img src="image/MATATECNOLOGIES.jpg" alt="Mata Technologies">
+      <img src="image/MATATECNOLOGIES1.jpg" alt="Mata Technologies">
+      <img src="image/MATATECNOLOGIES2.jpg" alt="Mata Technologies">
+      <img src="image/MATATECNOLOGIES3.jpg" alt="Mata Technologies">
+      <img src="image/MATATECNOLOGIES4.jpg" alt="Mata Technologies">
+     
+    </figure>
+    <figure>
+    <figcaption>T.A.R.S.I.E.R. 117</figcaption>
+      <img src="image/TARSIER117.jpg" alt="TARSIER 117">
+      <img src="image/TARSIER1171.jpg" alt="TARSIER 117">
+    </figure>
+    <figure>
+    <figcaption>ACCOMODATION</figcaption>
+    <figcaption>BAI HOTEL  AND VISTA HOTEL</figcaption>
+      <img src="image/HOTEL3.jpg" alt="ACCOMODATION">
+      <img src="image/HOTEL.jpg" alt="ACCOMODATION">
+      <img src="image/HOTEL13.jpg" alt="ACCOMODATION">
+      <img src="image/HOTEL14.jpg" alt="ACCOMODATION">
+      <img src="image/HOTEL1.jpg" alt="ACCOMODATION">
+      <img src="image/HOTEL2.jpg" alt="ACCOMODATION">
+      <img src="image/HOTEL3.jpg" alt="ACCOMODATION">
+      <img src="image/HOTEL4.jpg" alt="ACCOMODATION">
+      <img src="image/HOTEL5.jpg" alt="ACCOMODATION">
+      <img src="image/HOTEL6.jpg" alt="ACCOMODATION">
+      <img src="image/HOTEL7.jpg" alt="ACCOMODATION">
+      <img src="image/GROUP8.jpg" alt="ACCOMODATION">
+      <img src="image/HOTEL9.jpg" alt="ACCOMODATION">
+      <img src="image/HOTEL10.jpg" alt="ACCOMODATION">
+      <img src="image/HOTEL11.jpg" alt="ACCOMODATION">
+      <img src="image/HOTEL12.jpg" alt="ACCOMODATION">
+    </figure>
+    <figure>
+    <figcaption>BATCH 1 </figcaption>
+    <figcaption>RAMDOM PICTURE</figcaption>
+      <img src="image/GROUP1.jpg" alt="BATCH 1">
+      <img src="image/GROUP2.jpg" alt="BATCH 1">
+      <img src="image/GROUP3.jpg" alt="BATCH 1">
+      <img src="image/GROUP4.jpg" alt="BATCH 1">
+      <img src="image/GROUP5.jpg" alt="BATCH 1">
+      <img src="image/GROUP6.jpg" alt="BATCH 1">
+      <img src="image/GROUP7.jpg" alt="BATCH 1">
+      <img src="image/GROUP8.jpg" alt="BATCH 1">
+      </figure>
+      <figure>
+      <figcaption>CERTIFICATE </figcaption>
+      <img src="image/CERTIFICATE.jpg" alt="CERTIFICATE">
+      </figure>
+  </div>
+</section>
+
+<footer>
+  <p>Student Name | BSIT | Academic Year 2025–2026</p>
+  <p>© 2025 Educational Tour Portfolio</p>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <img src="" alt="Zoomed Image">
+</div>
+
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+
+/* Enable zoom for BOTH gallery and journal images */
+document.querySelectorAll('.gallery img, .journal-img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+  });
+});
+
+/* Close lightbox on click */
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+  lightboxImg.src = '';
+});
+</script>
+
+</script>
+</body>
+</html>

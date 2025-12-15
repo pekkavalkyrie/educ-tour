@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Educational Tour Portfolio | BSIT Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #03ff07;
+    --primary: #2563eb;
+    --secondary: #000808;
+    --accent: #38bdf8;
+    --text: #e802fd;
+    --card: #ffffff;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  /* BODY BACKGROUND IMAGE */
+ /* BODY BACKGROUND IMAGE */
+body {
+  font-family: 'Inter', sans-serif;
+  background-image: url('ROBOTS.jpg'); /* <-- local image in the same folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--text);
+  position: relative;
+}
+
+/* Optional overlay to improve text readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* adjust opacity if needed */
+  z-index: -1;
+}
+
+
+  /* NAVBAR */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #05fb19;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #01040c;
+  }
+
+  nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 500;
+    margin-left: 1rem;
+  }
+
+  nav a:hover { color: var(--primary); }
+
+  section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 4rem 1.5rem;
+  }
+
+  /* HERO */
+  .hero {
+    text-align: center;
+    padding-top: 6rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+  }
+
+  /* CARDS */
+  .card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    border-left: 3px solid var(--primary);
+    padding-left: 1.5rem;
+  }
+
+  .timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.8rem;
+    top: 0.4rem;
+    width: 14px;
+    height: 14px;
+    background: var(--primary);
+    border-radius: 50%;
+  }
+
+  /* GRID */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .gallery figure {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 0;
+  }
+
+  .gallery figcaption {
+    grid-column: 1 / -1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #0f172a;
+    color: #0505d7;
+  }
+
+  footer p { font-size: 0.9rem; }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+  }
+
+  /* IMAGE ZOOM (LIGHTBOX) */
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    animation: zoomIn 0.3s ease;
+  }
+
+  @keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+</style>
+
+
+<header>
+  <nav>
+    <strong>BSIT EDUCATIONAL TOUR PORTFOLIO</strong>
+    <div>
+      <a href="#overview">Overview</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#journals">Journals</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reflection">Reflection</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Educational Tour Portfolio</h1>
+  <p><strong>Cebu–Bohol Educational Tour & Industry Exposure</strong><br>
+  A professional learning journey focused on industry immersion, real-world IT applications, and career development.</p>
+</section>
+
+<section id="overview">
+  <h2>Tour Overview</h2>
+  <div class="card">
+    <p>The educational tour aimed to expose BSIT students to real-world technology environments, industry practices, and emerging innovations. The tour covered Cebu City and Bohol from <strong>November 12–15, 2025</strong>, involving visits to IT companies, research organizations, and public safety institutions.</p>
+    <ul>
+      <li><strong>Objectives:</strong> Industry exposure, real-world IT applications, career awareness</li>
+      <li><strong>Fields:</strong> IT, Business, Data Analytics, VR Technology, Emergency Response</li>
+      <li><strong>Expected Outcomes:</strong> Technical awareness, professional skills, innovation mindset</li>
+    </ul>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2>Daily Timeline</h2>
+  <div class="timeline">
+    <div class="timeline-item card">
+      <h3>Day 1 – November 12, 2025</h3>
+      <p><strong>UP Cebu – Business Incubator for Information Technology</strong></p>
+      <p>Introduction to startup incubation, innovation, and mentorship programs.</p>
+    </div>
+    <div class="timeline-item card">
+      <h3>Day 2 – November 13, 2025</h3>
+      <p><strong>RIVAN IT Cebu</strong> & <strong>Dynata Philippines Inc.</strong></p>
+      <p>Cybersecurity, networking, and data analytics exposure.</p>
+    </div>
+    <div class="timeline-item card">
+      <h3>Day 3 – November 14, 2025</h3>
+      <p><strong>Mata Technologies Inc.</strong></p>
+      <p>Virtual reality, 360° mapping, and digital visualization.</p>
+    </div>
+    <div class="timeline-item card">
+      <h3>Day 4 – November 15, 2025</h3>
+      <p><strong>T.A.R.S.I.E.R. 117 – Bohol</strong></p>
+      <p>Emergency response systems and public safety coordination.</p>
+    </div>
+  </div>
+</section>
+
+<section id="journals">
+  <h2>Company Journals</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>UP Cebu – Business Incubator for IT</h3>
+      <p><strong>Date:</strong> Nov 12, 2025<br><strong>Facilitator:</strong> Jason Nieve</p>
+      <p><strong>Overview:</strong> Supports startups through mentorship, business planning, and innovation labs.</p>
+      <ul>
+        <li>Startup incubation process</li>
+        <li>Collaboration with UP Cebu Fablab</li>
+        <li>Innovation-driven mindset</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>RIVAN IT Cebu</h3>
+      <p><strong>Date:</strong> Nov 13, 2025<br><strong>Facilitator:</strong> Anton Diego H. Lim</p>
+      <p><strong>Overview:</strong> Specializes in cybersecurity and network engineering.</p>
+      <ul>
+        <li>Cisco hands-on demonstrations</li>
+        <li>Career specialization paths</li>
+        <li>Professional growth in IT security</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Dynata Philippines Inc.</h3>
+      <p><strong>Date:</strong> Nov 13, 2025<br><strong>Facilitator:</strong> Kevin Lou</p>
+      <p><strong>Overview:</strong> Global data analytics company providing consumer insights.</p>
+      <ul>
+        <li>Data-driven decision making</li>
+        <li>Research accuracy importance</li>
+        <li>Analytics relevance to IT</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Mata Technologies Inc.</h3>
+      <p><strong>Date:</strong> Nov 14, 2025<br><strong>Facilitator:</strong> Kertinel Andre C. Tantuan</p>
+      <p><strong>Overview:</strong> Focuses on VR and 360° digital mapping solutions.</p>
+      <ul>
+        <li>Virtual tours for tourism</li>
+        <li>Innovation in visualization</li>
+        <li>Future of immersive tech</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>T.A.R.S.I.E.R. 117</h3>
+      <p><strong>Date:</strong> Nov 15, 2025</p>
+      <p><strong>Overview:</strong> Emergency response and disaster coordination center.</p>
+      <ul>
+        <li>Public safety systems</li>
+        <li>Communication technology</li>
+        <li>Disaster management operations</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Photo Gallery</h2>
+  <div class="gallery">
+    <figure>
+     <figcaption>UP IN IT UP CEBU INFORMATION TECHNOLOGY CENTER</figcaption>
+    <img src="UP1.jpg" alt="UP Cebu Visit">
+    <img src="UP2.jpg" alt="UP Cebu Visit">
+    <img src="UP3.jpg" alt="UP Cebu Visit">
+    <img src="UP4.jpg" alt="UP Cebu Visit">
+    <img src="UP5.jpg" alt="UP Cebu Visit">
+    <img src="UP6.jpg" alt="UP Cebu Visit">
+    <img src="UP7.jpg" alt="UP Cebu Visit">
+    <img src="UP8.jpg" alt="UP Cebu Visit">
+    </figure>
+    <figure>
+      <figcaption>RIVAN IT CEBU</figcaption>
+      <img src="RIVAN.jpg" alt="RIVAN IT">
+      <img src="RIVAN1.jpg" alt="RIVAN IT">
+      <img src="RIVAN2.jpg" alt="RIVAN IT">
+    </figure>
+    <figure>
+      <figcaption>DYNATA PHILIPPINES INC.</figcaption>
+      <img src="DYNATA5.jpg" alt="Dynata">
+      <img src="DYNATA4.jpg" alt="Dynata">
+      <img src="DYNATA3.jpg" alt="Dynata">
+      <img src="DYNATA2.jpg" alt="Dynata">
+      <img src="DYNATA1.jpg" alt="Dynata">
+      <img src="DYNATA6.jpg" alt="Dynata">
+    </figure>
+    <figure>
+      <figcaption>MATA TECHNOLOGIES</figcaption>
+      <img src="MATATECNOLOGIES.jpg" alt="Mata Technologies">
+      <img src="MATATECNOLOGIES1.jpg" alt="Mata Technologies">
+      <img src="MATATECNOLOGIES2.jpg" alt="Mata Technologies">
+      <img src="MATATECNOLOGIES3.jpg" alt="Mata Technologies">
+      <img src="MATATECNOLOGIES4.jpg" alt="Mata Technologies">
+     
+    </figure>
+    <figure>
+    <figcaption>T.A.R.S.I.E.R. 117</figcaption>
+      <img src="TARSIER117.jpg" alt="TARSIER 117">
+      <img src="TARSIER1171.jpg" alt="TARSIER 117">
+    </figure>
+  </div>
+</section>
+
+<section id="reflection">
+  <h2>Reflection</h2>
+  <div class="card">
+    <p>The educational tour was a valuable and eye-opening experience that strengthened my understanding of how information technology is applied across different industries. I gained technical awareness, improved communication skills, and developed clearer career goals through direct interaction with professionals.</p>
+    <p>Despite challenges such as adapting to new environments and complex concepts, the experience taught me flexibility, teamwork, and professional discipline. Overall, the tour enhanced my academic growth and motivated me to pursue innovation and continuous learning in my future IT career.</p>
+  </div>
+</section>
+
+<footer>
+  <p>Student Name | BSIT | Academic Year 2025–2026</p>
+  <p>© 2025 Educational Tour Portfolio</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="Zoomed Image">
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+
+  document.querySelectorAll('.gallery img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  });
+</script>
+
+</body>
+</html>
