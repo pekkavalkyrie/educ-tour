@@ -133,6 +133,7 @@ section h2 {
   color: var(--accent);
 }
 
+
 .gallery img {
   width: 220px;          /* same width */
   height: 160px;         /* same height */
@@ -177,6 +178,89 @@ footer {
   max-height: 90%;
   border-radius: 12px;
 }
+/* =========================
+   ABOUT ME (PROFILE)
+========================= */
+.profile {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.profile img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+.profile p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skills {
+  text-align: center;
+}
+
+.skills span {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.4rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid var(--border);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.skills span:hover {
+  transform: translateY(-3px);
+  background: rgba(56, 189, 248, 0.25);
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact p {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.contact strong {
+  color: var(--accent);
+}
+
+/* =========================
+   FOOTER (ENHANCED)
+========================= */
+footer p {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .profile {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile img {
+    margin: 0 auto 1rem;
+  }
+}
+
 </style>
 </head>
 
@@ -185,14 +269,52 @@ footer {
   <nav>
     <strong>BSIT EDUCATIONAL TOUR PORTFOLIO</strong>
     <div>
-      <a href="#overview">Overview</a>
-      <a href="#timeline">Timeline</a>
-      <a href="#journals">Journals</a>
-      <a href="#gallery">Gallery</a>
+      <a href="#About Me">About Me</a>
+      <a href="#Skills and Contact">Skills and Contact</a>
+      <a href="#Overview">Overview</a>
+      <a href="#Timeline">Timeline</a>
+      <a href="#Journals">Journals</a>
+      <a href="#Gallery">Gallery</a>
       
     </div>
   </nav>
 </header>
+
+<section id="About Me">
+  <h2>About Me</h2>
+  <div class="card profile">
+    <img src="image/PROFILE.jpg" alt="My Photo">
+    <div>
+      <p>
+      I am <strong>Mark Anthony Tagalog</strong>, a BSIT student at Holy Cross of Davao College, 
+      currently practicing React Native development and website design.
+
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="Skills and Contact">
+  <h2>Skills</h2>
+  <div class="card skills">
+    <span>HTML & CSS</span>
+    <span>FIGMA</span>
+    <span>react native</span>
+    <span>design</span>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="Skills and Contact">
+  <h2>Contact Information</h2>
+  <div class="card contact">
+    <p><strong>Name:</strong> Mark Anthony Tagalog</p>
+    <p><strong>Course:</strong> BS Information Technology</p>
+    <p><strong>Email:</strong> markanthonytagalog@hcdc.edu.ph</p>
+    <p><strong>Phone:</strong> 09214406452</p>
+  </div>
+</section>
 
 <section class="hero">
   <h1>Educational Tour Portfolio</h1>
@@ -200,7 +322,7 @@ footer {
   A professional learning journey focused on industry immersion, real-world IT applications, and career development.</p>
 </section>
 
-<section id="overview">
+<section id="Overview">
   <h2>Tour Overview</h2>
   <div class="card">
     <p>
@@ -220,9 +342,9 @@ footer {
 </section>
 
 
-<section id="timeline">
+<section id="Timeline">
   <h2>Daily Timeline</h2>
-  <div class="timeline">
+  <div class="Timeline">
     <div class="card">
       <h3>Day 1 – November 12, 2025</h3>
       <p><strong>UP Cebu – Business Incubator for Information Technology</strong></p>
@@ -243,10 +365,13 @@ footer {
       <p><strong>T.A.R.S.I.E.R. 117 – Bohol</strong></p>
       <p>Emergency response systems and public safety coordination.</p>
     </div>
+    <div class="card">
+      <h3>CERTIFICATE OF COMPLETION</h3>
+    </div>
   </div>
 </section>
 
-<section id="journals">
+<section id="Journals">
   <h2>Company Journals</h2>
   <div class="grid">
 
@@ -284,9 +409,16 @@ footer {
       <p><strong>Date:</strong> Nov 15, 2025</p>
 
     </div>
+
+     <div class="card">
+      <img src="image/CERTIFICATE.jpg" alt="TARSIER 117" class="journal-img">
+      <h3>CERTIFICATE</h3>
+
+     </div>
+
 </section>
 
-<section id="gallery">
+<section id="Gallery">
   <h2>Photo Gallery</h2>
   <div class="gallery">
     <figure>
